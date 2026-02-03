@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Loop Questions 1–20</title>
+</head>
+<body>
+  <h2>JavaScript Loop Questions (Check Console Output)</h2>
+
+  <script>
+    // ================================
+    // Question 1: Print 1 to 5 (for loop)
+    // ================================
+    console.log("Q1:");
+    for (let i = 1; i <= 5; i++) {
+      console.log(i);
+    }
+
+    // ================================
+    // Question 2: Even numbers 2 to 10 (while loop)
+    // ================================
+    console.log("Q2:");
+    let num2 = 2;
+    while (num2 <= 10) {
+      console.log(num2);
+      num2 += 2;
+    }
+
+    // ================================
+    // Question 3: Sum of numbers 1 to 10 (for loop)
+    // ================================
+    console.log("Q3:");
+    let sum3 = 0;
+    for (let i = 1; i <= 10; i++) {
+      sum3 += i;
+    }
+    console.log("Sum =", sum3);
+
+    // ================================
+    // Question 4: Factorial of 5 (while loop)
+    // ================================
+    console.log("Q4:");
+    let n4 = 5;
+    let fact4 = 1;
+    while (n4 > 1) {
+      fact4 *= n4;
+      n4--;
+    }
+    console.log("Factorial =", fact4);
+
+    // ================================
+    // Question 5: Square of 1 to 5 (for loop)
+    // ================================
+    console.log("Q5:");
+    for (let i = 1; i <= 5; i++) {
+      console.log(i * i);
+    }
+
+    // ================================
+    // Question 6: Cube of 1 to 5 (while loop)
+    // ================================
+    console.log("Q6:");
+    let num6 = 1;
+    while (num6 <= 5) {
+      console.log(num6 * num6 * num6);
+      num6++;
+    }
+
+    // ================================
+    // Question 7: Print names array (for loop)
+    // ================================
+    console.log("Q7:");
+    const names7 = ["Alice", "Bob", "Charlie", "David"];
+    for (let i = 0; i < names7.length; i++) {
+      console.log(names7[i]);
+    }
+
+    // ================================
+    // Question 8: Sum of array elements (while loop)
+    // ================================
+    console.log("Q8:");
+    const arr8 = [10, 20, 30, 40, 50];
+    let sum8 = 0;
+    let i8 = 0;
+    while (i8 < arr8.length) {
+      sum8 += arr8[i8];
+      i8++;
+    }
+    console.log("Sum =", sum8);
+
+    // ================================
+    // Question 9: Reverse array print (for loop)
+    // ================================
+    console.log("Q9:");
+    const fruits9 = ["apple", "banana", "orange", "kiwi"];
+    for (let i = fruits9.length - 1; i >= 0; i--) {
+      console.log(fruits9[i]);
+    }
+
+    // ================================
+    // Question 10: Largest number in array (while loop)
+    // ================================
+    console.log("Q10:");
+    const nums10 = [25, 10, 45, 30, 15];
+    let largest10 = nums10[0];
+    let idx10 = 1;
+    while (idx10 < nums10.length) {
+      if (nums10[idx10] > largest10) {
+        largest10 = nums10[idx10];
+      }
+      idx10++;
+    }
+    console.log("Largest =", largest10);
+
+    // ================================
+    // Question 11: Sum of even numbers 1 to 20 (for loop)
+    // ================================
+    console.log("Q11:");
+    let sum11 = 0;
+    for (let i = 2; i <= 20; i += 2) {
+      sum11 += i;
+    }
+    console.log("Sum of evens =", sum11);
+
+    // ================================
+    // Question 12: Product of odd numbers 1 to 15 (while loop)
+    // ================================
+    console.log("Q12:");
+    let num12 = 1;
+    let product12 = 1;
+    while (num12 <= 15) {
+      product12 *= num12;
+      num12 += 2;
+    }
+    console.log("Product of odds =", product12);
+
+    // ================================
+    // Question 13: Star pattern (for loop)
+    // ================================
+    console.log("Q13:");
+    for (let i = 1; i <= 5; i++) {
+      console.log("*".repeat(i));
+    }
+
+    // ================================
+    // Question 14: Print 10 to 1 (while loop)
+    // ================================
+    console.log("Q14:");
+    let num14 = 10;
+    while (num14 >= 1) {
+      console.log(num14);
+      num14--;
+    }
+
+    // ================================
+    // Question 15: Factorial of 6 (for loop)
+    // ================================
+    console.log("Q15:");
+    let fact15 = 1;
+    for (let i = 6; i >= 1; i--) {
+      fact15 *= i;
+    }
+    console.log("Factorial =", fact15);
+
+    // ================================
+    // Question 16: Sum of digits of 123 (while loop)
+    // ================================
+    console.log("Q16:");
+    let number16 = 123;
+    let sumDigits16 = 0;
+    while (number16 > 0) {
+      sumDigits16 += number16 % 10;
+      number16 = Math.floor(number16 / 10);
+    }
+    console.log("Sum of digits =", sumDigits16);
+
+    // ================================
+    // Question 17: Pattern 55555...1 (for loop)
+    // ================================
+    console.log("Q17:");
+    for (let i = 5; i >= 1; i--) {
+      console.log(String(i).repeat(i));
+    }
+
+    // ================================
+    // Question 18: First 10 Fibonacci numbers (while loop)
+    // ================================
+    console.log("Q18:");
+    let a = 0, b = 1, count = 1;
+    while (count <= 10) {
+      console.log(a);
+      let next = a + b;
+      a = b;
+      b = next;
+      count++;
+    }
+
+    // ================================
+    // Question 19: Prime numbers between 1 and 20 (for loop)
+    // ================================
+    console.log("Q19:");
+    for (let num = 2; num <= 20; num++) {
+      let prime = true;
+      for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+          prime = false;
+          break;
+        }
+      }
+      if (prime) console.log(num);
+    }
+
+    // ================================
+    // Question 20: Reverse number 12345 (while loop)
+    // ================================
+    console.log("Q20:");
+    let number20 = 12345;
+    let reversed20 = 0;
+    while (number20 > 0) {
+      reversed20 = reversed20 * 10 + (number20 % 10);
+      number20 = Math.floor(number20 / 10);
+    }
+    console.log("Reversed =", reversed20);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>If/Else & Switch Practice (Q1–Q10)</title>
+</head>
+<body>
+  <h2>If/Else & Switch Practice (Check Console Output)</h2>
+
+  <script>
+    // ======================================
+    // Question 1: Positive or Negative Number
+    // ======================================
+    console.log("Q1:");
+    let number1 = -5;
+
+    if (number1 > 0) {
+      console.log("The number is positive.");
+    } else if (number1 < 0) {
+      console.log("The number is negative.");
+    } else {
+      console.log("The number is zero.");
+    }
+
+    // ======================================
+    // Question 2: Voting Eligibility
+    // ======================================
+    console.log("Q2:");
+    let age = 20;
+
+    if (age >= 18) {
+      console.log("You are eligible to vote.");
+    } else {
+      console.log("You are not eligible to vote yet.");
+    }
+
+    // ======================================
+    // Question 3: Day of the Week (Switch Case)
+    // ======================================
+    console.log("Q3:");
+    let dayNumber = 5;
+
+    switch (dayNumber) {
+      case 1:
+        console.log("Sunday");
+        break;
+      case 2:
+        console.log("Monday");
+        break;
+      case 3:
+        console.log("Tuesday");
+        break;
+      case 4:
+        console.log("Wednesday");
+        break;
+      case 5:
+        console.log("Thursday");
+        break;
+      case 6:
+        console.log("Friday");
+        break;
+      case 7:
+        console.log("Saturday");
+        break;
+      default:
+        console.log("Invalid day number.");
+    }
+
+    // ======================================
+    // Question 4: String Longer Than 10 Characters
+    // ======================================
+    console.log("Q4:");
+    let inputString = "Hello, World!";
+
+    if (inputString.length > 10) {
+      console.log("The string is longer than 10 characters.");
+    } else {
+      console.log("The string is 10 characters or shorter.");
+    }
+
+    // ======================================
+    // Question 5: Student Grade Based on Score
+    // ======================================
+    console.log("Q5:");
+    let score = 78;
+    let grade;
+
+    if (score >= 90) {
+      grade = "A";
+    } else if (score >= 80) {
+      grade = "B";
+    } else if (score >= 70) {
+      grade = "C";
+    } else if (score >= 60) {
+      grade = "D";
+    } else {
+      grade = "F";
+    }
+
+    console.log("Your grade is:", grade);
+
+    // ======================================
+    // Question 6: Days in Month (Switch Case)
+    // ======================================
+    console.log("Q6:");
+
+    function getDaysInMonth(monthNumber) {
+      switch (monthNumber) {
+        case 2:
+          return 28;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+          return 30;
+        default:
+          return 31;
+      }
+    }
+
+    console.log("Days in month 7 =", getDaysInMonth(7));
+
+    // ======================================
+    // Question 7: Leap Year Check
+    // ======================================
+    console.log("Q7:");
+    let year = 2024;
+
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+      console.log(year + " is a leap year.");
+    } else {
+      console.log(year + " is not a leap year.");
+    }
+
+    // ======================================
+    // Question 8: Check if Variable is Array
+    // ======================================
+    console.log("Q8:");
+    let data = [1, 2, 3];
+
+    if (Array.isArray(data)) {
+      console.log("The variable is an array.");
+    } else {
+      console.log("The variable is not an array.");
+    }
+
+    // ======================================
+    // Question 9: Discount Calculation (Switch Case)
+    // ======================================
+    console.log("Q9:");
+
+    function calculateDiscount(purchaseAmount) {
+      switch (true) {
+        case (purchaseAmount < 100):
+          return purchaseAmount * 0.05;
+        default:
+          return purchaseAmount * 0.10;
+      }
+    }
+
+    console.log("Discount on 120 =", calculateDiscount(120));
+
+    // ======================================
+    // Question 10: Determine Variable Type
+    // ======================================
+    console.log("Q10:");
+
+    function getType(variable) {
+      if (typeof variable === "string") {
+        return "string";
+      } else if (typeof variable === "number") {
+        return "number";
+      } else if (typeof variable === "boolean") {
+        return "boolean";
+      } else if (typeof variable === "object") {
+        if (variable === null) {
+          return "null";
+        } else {
+          return "object";
+        }
+      } else if (typeof variable === "undefined") {
+        return "undefined";
+      } else {
+        return "unknown";
+      }
+    }
+
+    console.log(getType("Hello"));     // string
+    console.log(getType(100));         // number
+    console.log(getType(true));        // boolean
+    console.log(getType(null));        // null
+    console.log(getType([1, 2, 3]));   // object
+
+  </script>
+</body>
+</html>
